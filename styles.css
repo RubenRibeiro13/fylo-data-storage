@@ -1,0 +1,219 @@
+body {
+  margin: 0;
+  padding: 20% 0;
+
+  background-color: hsl(229, 57%, 11%);
+  background-image: url("images/bg-desktop.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% auto;
+
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  color: hsl(243, 100%, 93%);
+  font-size: 14px;
+}
+
+/* Containers */
+
+.sections-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.dark-blue-container {
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 10px;
+}
+
+/* Sections */
+
+.header-container {
+  width: 87%;
+  max-width: 390px;
+  border-top-right-radius: 105px;
+  margin-right: 35px;
+}
+
+.logo {
+  display: block;
+  padding: 45px 0 35px 45px;
+}
+
+.icon {
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 10px;
+  margin: 0 10px 45px;
+}
+
+.document-icon {
+  padding: 14px 16px;
+  margin-left: 45px;
+}
+
+.folder-icon {
+  padding: 16px 14px;
+}
+
+.upload-icon {
+  padding: 18px 14px;
+}
+
+.main-container {
+  width: 87%;
+  max-width: 600px;
+  position: relative;
+}
+
+.space-used-text {
+  padding: 40px 40px 20px;
+  margin: 0;
+}
+
+.space-used {
+  font-weight: 700;
+}
+
+.space-left-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+  border-color: white;
+  width: 200px;
+  height: 80px;
+  border-radius: 10px 10px 0 10px;  
+
+  position: absolute;
+  right: 40px;
+  top: -50px;
+}
+
+.space-left-container::after {
+  content: "";
+  border-top: 12.5px solid;
+  border-top-color: inherit;
+  border-left: 12.5px solid transparent;
+  border-right: 12.5px solid;
+  border-right-color: inherit;
+  border-bottom: 12.5px solid transparent;
+
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+}
+
+.space-left-item-1 {
+  color: hsl(229, 57%, 11%);
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 10px 0 0;
+}
+
+.space-left-item-2 {
+  color: hsl(229, 7%, 55%);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.progress-custom {
+  background-color: hsl(229, 56%, 18%);
+  height: 22px;
+  margin: 0 40px 10px;
+  border-radius: 11px;
+
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar-custom {
+  background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  height: 16px;
+  width: 81.5%;
+  border-radius: 8px;
+  margin-left: 3px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.progress-bar-now {
+  background-color: white;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  margin-right: 3px;
+}
+
+.progress-bar-extremes {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 40px 45px;
+}
+
+.progress-bar-min, .progress-bar-max {
+  font-weight: 700;
+  margin: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+
+@media (max-width: 1200px) {
+
+  .sections-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-container {
+    margin: 0 0 20px;
+  }
+
+  .space-used-text {
+    text-align: center;
+  }
+
+  .space-left-container {
+    border-radius: 10px;
+    bottom: -40px;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .space-left-container::after {
+    display: none;
+  }
+
+  .progress-bar-extremes {
+    margin-bottom: 65px;
+  }
+
+  .attribution {
+    margin-top: 50px;
+  }
+
+}
+
+
+
+@media (max-width: 600px) {
+  body {
+    background-image: url("images/bg-mobile.png");
+    background-position: top;
+  }
+}
